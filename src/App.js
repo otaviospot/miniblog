@@ -47,30 +47,30 @@ function App() {
             <Navbar />
             <div className="container">
               <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/about" element={<About />}></Route>
-                <Route path="/search" element={<Search />}></Route>
-                <Route path="/posts/:id" element={<Post />}></Route>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/posts/:id" element={<Post />} />
                 <Route
                   path="/login"
                   element={!user ? <Login /> : <Navigate to="/" />}
-                ></Route>
+                 />
                 <Route
                   path="/register"
                   element={!user ? <Register /> : <Navigate to="/" />}
-                ></Route>
+                 />
                 <Route
                   path="/dashboard"
                   element={user ? <Dashboard /> : <Navigate to="/login" />}
-                ></Route>
+                 />
                 <Route
                   path="/posts/edit/:id"
                   element={user ? <EditPost /> : <Navigate to="/login" />}
-                ></Route>
+                 />
                 <Route
                   path="/posts/create"
                   element={user ? <CreatePost /> : <Navigate to="/login" />}
-                ></Route>
+                 />
               </Routes>
             </div>
             <Footer />

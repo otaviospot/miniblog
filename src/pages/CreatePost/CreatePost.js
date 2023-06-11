@@ -88,7 +88,7 @@ const CreatePost = () => {
             required
             onChange={(e) => setBody(e.target.value)}
             value={body}
-          ></textarea>
+           />
         </label>
         <label>
           <span>Tags</span>
